@@ -8,7 +8,7 @@ namespace Summator
 {
     public static class Summator
     {
-        // method to be tested
+        // Test method that sums the array of numbers
         public static long Sum(int[] arr)
         {
             long sum = arr[0];
