@@ -147,5 +147,6 @@ namespace Summator.UnitTests
             Assert.That(actual, Is.EqualTo(expected));
 
         }
+        // sample test
     }
 }
