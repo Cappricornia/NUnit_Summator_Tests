@@ -29,8 +29,8 @@ namespace Summator
                 sum += arr[i];
                 
             }
-            sum /= arr.Length;
-            return sum;
+           
+            return sum / arr.Length;
         }
 
         // This method is static as it doesn't create an object and void as it doesn't return anything, its perpose is to test the method above
