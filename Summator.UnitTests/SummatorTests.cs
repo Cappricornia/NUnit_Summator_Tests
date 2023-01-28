@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Collections.ObjectModel;
 
 namespace Summator.UnitTests
 {
@@ -147,6 +148,33 @@ namespace Summator.UnitTests
             Assert.That(actual, Is.EqualTo(expected));
 
         }
-        // sample test
+
+        
+        // DDT Data Driven Testing
+        [TestCase(new int[] {1, 2}, 3)]
+        [TestCase(new int[] {1}, 1)]
+        [TestCase(new int[] {-3, -8}, -11)]
+        [TestCase(new int[] {5, 0}, 5)]
+        [TestCase(new int[] {}, 0)]
+
+        public void Tets_SummatorSumDDT(int[] values, long expected)
+        {
+            var actual = Summator.Sum(values);
+
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+
+        [TestCase("Peter, Maria, Ivan", 0, "Peter")]
+        public void Test_CollectionGetByInvalidIndex(string data, int index, string expected)
+        {
+            var coll = new Collection<string>(data.Split(","));
+
+            var actual = coll[index];
+
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+
+
+        
     }
 }
