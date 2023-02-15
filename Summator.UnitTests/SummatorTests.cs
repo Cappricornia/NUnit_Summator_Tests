@@ -116,9 +116,6 @@ namespace Summator.UnitTests
             var percentages = new int[] { 10, 30, 50, 100 };
             Assert.That(percentages, Is.All.InRange(0, 100));
 
-            //File / directory assertions
-            Assert.That("C:\\Users\\hrist\\Desktop\\doc.docx", Does.Exist);
-
             // Assertions can show messages to helps with diagnostics. Messages can be customed.
              // Assert.That(percentage, Is.EqualTo(100), "Returned VAT.");
             // Message: 
@@ -173,8 +170,6 @@ namespace Summator.UnitTests
 
             Assert.That(actual, Is.EqualTo(expected));
         }
-
-
-        
+ 
     }
 }
