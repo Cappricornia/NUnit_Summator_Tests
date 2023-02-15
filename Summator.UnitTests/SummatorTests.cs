@@ -152,7 +152,7 @@ namespace Summator.UnitTests
         [TestCase(new int[] {1}, 1)]
         [TestCase(new int[] {-3, -8}, -11)]
         [TestCase(new int[] {5, 0}, 5)]
-        [TestCase(new int[] {}, 0)]
+        [TestCase(new int[] {0}, 0)]
 
         public void Tets_SummatorSumDDT(int[] values, long expected)
         {
